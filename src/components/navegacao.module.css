@@ -1,0 +1,27 @@
+.teste {
+  background-color: rgb(182, 202, 218);
+}
+.btn:hover {
+  background-color: rgb(30, 92, 143);
+}
+.nav {
+  animation: nav 0.2s forwards;
+}
+body a {
+  color: rgb(58, 134, 196);
+  font-family: "Roboto";
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+body a:hover {
+  color: rgb(30, 92, 143);
+}
+@keyframes nav {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
