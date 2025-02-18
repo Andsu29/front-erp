@@ -5,7 +5,6 @@ export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [dados, setDados] = React.useState(null);
-
   React.useEffect(() => {
     GET_ITENS().then((json) => {
       setDados(json.data);
@@ -13,6 +12,8 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={dados}>{children}</GlobalContext.Provider>
+    <GlobalContext.Provider value={{ dados, setDados }}>
+      {children}
+    </GlobalContext.Provider>
   );
 };

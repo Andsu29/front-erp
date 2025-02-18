@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Produtos from "./components/Produtos";
 import Navegacao from "./components/Navegacao";
+import CadastroProduto from "./components/CadastroProduto";
 import { GlobalStorage } from "./GlobalContext";
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
         <BrowserRouter>
           <GlobalStorage>
             <Navegacao />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/produtos" element={<Produtos />} />
-              </Routes>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/produtos" element={<Produtos />} />
+              <Route path="/cadastro-produto" element={<CadastroProduto />} />
+            </Routes>
           </GlobalStorage>
         </BrowserRouter>
       </div>
